@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>产品查询系统</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* 全局样式 */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f7fa;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            padding: 30px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        /* 查询组样式 */
+        .query-group {
+            margin-bottom: 25px;
+            background-color: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .query-group:hover {
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            transform: translateY(-2px);
+        }
+
+        /* 表单元素样式 */
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #4b5563;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px 12px;
+            margin-bottom: 15px;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            font-size: 14px;
+            transition: border-color 0.2s ease;
+        }
+
+        input[type="text"]:focus {
+            border-color: #3b82f6;
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+        }
+
+        /* 按钮样式 */
+        button, input[type="submit"] {
+            display: inline-block;
+            padding: 10px 16px;
+            border: none;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        input[type="submit"] {
+            background-color: #3b82f6;
+            color: #ffffff;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #2563eb;
+            transform: translateY(-1px);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .back-button {
+            background-color: #f43f5e;
+            color: #ffffff;
+            text-decoration: none;
+            text-align: center;
+            display: block;
+            margin: 25px auto 0;
+            max-width: 150px;
+        }
+
+        .back-button:hover {
+            background-color: #e11d48;
+            transform: translateY(-1px);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 22px;
+            }
+
+            .query-group {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>产品查询系统</h1>
+
+    <!-- ID查询表单 -->
+    <div class="query-group">
+        <form action="ConnectionDemo.jsp" method="post">
+            <label for="productID">按产品ID查询</label>
+            <input type="text" id="productID" name="ProductID" placeholder="请输入产品ID" required>
+            <input type="submit" value="ID查询">
+        </form>
+    </div>
+
+    <!-- 名称查询表单 -->
+    <div class="query-group">
+        <form action="ConnectionDemo.jsp" method="post">
+            <label for="productName">按产品名称查询</label>
+            <input type="text" id="productName" name="ProductName" placeholder="请输入产品名称" required>
+            <input type="submit" value="名称查询">
+        </form>
+    </div>
+
+    <!-- 返回按钮 -->
+    <a href="welcome.jsp" class="back-button">返回首页</a>
+</div>
+</body>
+</html>
